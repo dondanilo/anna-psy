@@ -389,15 +389,18 @@ ul { list-style: none; }
   border-radius: var(--r-lg);
   overflow: hidden;
   background: var(--warm-100);
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
 }
-.photo-placeholder {
-  width: 75%;
-  opacity: .6;
+.photo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+  transition: transform .6s ease;
 }
-.photo-placeholder svg { width: 100%; height: auto; }
+.photo-frame:hover .photo-img {
+  transform: scale(1.03);
+}
 
 .about-badge {
   position: absolute;
